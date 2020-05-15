@@ -26,7 +26,7 @@ class MessageApp():
         self.FORMAT = "utf-8"
         self.DISCONNECT_MESSAGE = "!DISCONNECT" 
 
-        self.SERVER = ""
+        self.SERVER = "" #the IP address of the server goes here
         self.ADDR = (self.SERVER,self.PORT)
 
         self.client = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
