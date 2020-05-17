@@ -40,7 +40,7 @@ class MessageApp():
    
 
 
-    def sendMessage(self,message):
+    def printToTextBox(self,message):
         self.txtField.insert(INSERT, message)
 
      
@@ -69,7 +69,7 @@ class MessageApp():
             if len(serverMessage) <= 0:
                 break
             serverMessage = serverMessage.decode(self.FORMAT)
-            self.sendMessage(serverMessage)
+            self.printToTextBox(serverMessage)
 def main():
 
     window = Tk()
