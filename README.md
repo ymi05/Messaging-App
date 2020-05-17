@@ -1,5 +1,6 @@
 # Messaging-App
-Basic messaging app using your local network
+Basic messaging app using your local network.
+
 You must first run the server.py script and then run the app.py.
 
 You can use more than one terminal to run the app.py script. 
