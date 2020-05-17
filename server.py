@@ -46,6 +46,7 @@ def handle_client(conn, addr):
             print(f"[{sender}]: {msg}")
 
             sendToAllClients(str.encode(f"[{sender}]: {msg}\n"))
+    del clients[addr]
     conn.close()
 
 def start():

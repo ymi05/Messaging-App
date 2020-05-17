@@ -1,12 +1,16 @@
 from tkinter import *
 from tkinter import scrolledtext
-import socket
+from client import Client
+from MessageSender import MessageSender
 import threading
 import time
 
 class MessageApp():
     def __init__(self,master):
-      
+        self.clientObj = Client()
+        self.clientObj = self.clientObj.getClient()
+        self.sender = MessageSender(self.clientObj)
+
         self.master = master
         self.master.title("Message App")
         self.master.geometry('405x230')
@@ -17,24 +21,16 @@ class MessageApp():
 
         self.messageEntry.grid(column=0, row=8)
 
+  
 
-        self.sendBtn = Button(self.master, text="Click Me" ,command = lambda: self.send(self.messageEntry.get()))
 
+        self.sendBtn = Button(self.master, text="Send Messages" ,command = lambda: self.send(self.messageEntry.get()))
         self.sendBtn.grid(column=0, row=11)
 
-
-        self.HEADER = 64 
-
-        self.PORT = 5050
+ 
         self.FORMAT = "utf-8"
         self.DISCONNECT_MESSAGE = "!DISCONNECT" 
 
-        self.SERVER = ""
-        self.ADDR = (self.SERVER,self.PORT)
-
-        self.client = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-
-        self.client.connect(self.ADDR)
         self.thread = threading.Thread(target=self.waitForResponse)
         self.thread.start()
    
@@ -50,21 +46,16 @@ class MessageApp():
     def send(self,msg):
         self.messageEntry.delete(0, END)
         self.messageEntry.insert(0, "")
+        self.sender.sendMessageToServer(msg)
 
-        message = msg.encode(self.FORMAT)
-        msg_length = len(message)
-        send_length = str(msg_length).encode(self.FORMAT)
-        send_length += b' ' * (self.HEADER - len(send_length))#the byte rep of this string
-        self.client.send(send_length)
-        self.client.send(message)
-        if(self.DISCONNECT_MESSAGE == message.decode(self.FORMAT)):
+        if(self.DISCONNECT_MESSAGE == msg):
             sys.exit()
             self.master.destroy()
         
     
     def waitForResponse(self):
         while True:
-            serverMessage = self.client.recv(1024)
+            serverMessage = self.clientObj.recv(1024)
         
             if len(serverMessage) <= 0:
                 break
@@ -73,7 +64,7 @@ class MessageApp():
 def main():
 
     window = Tk()
-    app = MessageApp(window)
+    MessageApp(window)
 
 
     window.mainloop()
