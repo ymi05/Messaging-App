@@ -6,7 +6,7 @@ class Client():
 
         self.PORT = 5050
         self.DISCONNECT_MESSAGE = "!DISCONNECT" 
-        self.SERVER = "192.168.1.36"
+        self.SERVER = "" #INSERT YOUR LOCAL IP ADDRESS HERE
         self.ADDR = (self.SERVER,self.PORT)
 
         self.client = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
