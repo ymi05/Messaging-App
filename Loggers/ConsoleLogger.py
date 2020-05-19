@@ -1,4 +1,4 @@
-from Loggers.Logger import Logger
+from Logger import Logger
 import os
 from datetime import datetime
 class ConsoleLogger(Logger): 

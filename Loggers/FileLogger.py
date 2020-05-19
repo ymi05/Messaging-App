@@ -1,8 +1,8 @@
-from Loggers.Logger import Logger
+from Logger import Logger
 from datetime import datetime
 from os import path
 class FileLogger(Logger):
-    def __init__(self,currentFile,logFile = "log.txt"):
+    def __init__(self,currentFile,logFile = "../log.txt"):
         super().__init__(currentFile)
         self.filePath = logFile
 
