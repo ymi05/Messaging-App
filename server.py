@@ -1,7 +1,6 @@
 import socket 
 import threading
 import sys
-from Logger import Logger
 
 HEADER = 64 
 
@@ -47,7 +46,7 @@ def handle_client(conn, addr):
                     tempName = msg.split(FILE_NAME_MESSAGE)[1]
                     print(f"[{sender}] has sent a File")
 
-                    sendToAllClients( str.encode(f"[{sender}] has sent a File"))
+                    sendToAllClients(str.encode(f"[{sender}] has sent a File"))
                     filename = ''
                     while True:
                         data = conn.recv(1024).decode('utf-8')
