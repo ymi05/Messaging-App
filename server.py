@@ -1,5 +1,7 @@
 import socket 
-import threading 
+import threading
+import sys
+from Logger import Logger
 
 HEADER = 64 
 
@@ -10,44 +12,73 @@ ADDR = (SERVER,PORT)
 FORMAT = "utf-8"
 DISCONNECT_MESSAGE = "!DISCONNECT" 
 CHANGE_NAME_MESSAGE = "!NAME=" 
+FILE_NAME_MESSAGE = "!FILE=" 
 
 server = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 server.bind(ADDR) 
 clients = {}
  
-def handle_client(conn, addr): 
+def handle_client(conn, addr):
+    logger = Logger()
+   
     print(f"[NEW CONNECTION] {addr} connected.")
     sender = addr
     connected = True
     while connected:
         #wait until you recivce info from the client
-        msg_length = conn.recv(HEADER).decode(FORMAT)
+        try:
+            msg_length = conn.recv(HEADER).decode(FORMAT)
 
-        if msg_length:# we recieve nothing when we connect the first time
+            if msg_length:# we recieve nothing when we connect the first time
 
-            msg_length = int(msg_length)
-            msg = conn.recv(msg_length).decode(FORMAT) 
+                msg_length = int(msg_length)
+                msg = conn.recv(msg_length).decode(FORMAT) 
 
-            if CHANGE_NAME_MESSAGE in msg:
-                tempName = msg.split(CHANGE_NAME_MESSAGE)[1]
-                print(f"[{sender}] changed their name to {tempName}")
- 
-                sendToAllClients( str.encode(f"[{sender}] changed their name to {tempName}\n"))
-         
-                sender = tempName
-                continue
+                if CHANGE_NAME_MESSAGE in msg:
+                    tempName = msg.split(CHANGE_NAME_MESSAGE)[1]
+                    print(f"[{sender}] changed their name to {tempName}")
 
-            if(msg == DISCONNECT_MESSAGE):
-                print(f"[{sender}]: DISCONNECTED")
-  
-                sendToAllClients(str.encode(f"[{sender}]: DISCONNECTED\n"))
-                connected = False
-                break
-            print(f"[{sender}]: {msg}")
+                    sendToAllClients( str.encode(f"[{sender}] changed their name to {tempName}\n"))
+            
+                    sender = tempName
+                    continue
+                
+                if FILE_NAME_MESSAGE in msg:
+                    tempName = msg.split(FILE_NAME_MESSAGE)[1]
+                    print(f"[{sender}] has sent a File")
 
-            sendToAllClients(str.encode(f"[{sender}]: {msg}\n"))
+                    sendToAllClients( str.encode(f"[{sender}] has sent a File"))
+                    filename = ''
+                    while True:
+                        data = conn.recv(1024).decode('utf-8')
+                        if not data:
+                            break
+                        filename += data
+                    print("from connected user: " + filename)
+                    conn.send(filename.encode('utf-8'))
+
+                    continue
+
+                if(msg == DISCONNECT_MESSAGE):
+                    print(f"[{sender}]: DISCONNECTED")
+
+                    sendToAllClients(str.encode(f"[{sender}]: DISCONNECTED\n"))
+                    connected = False
+                    break
+                print(f"[{sender}]: {msg}")
+                
+
+
+
+
+                sendToAllClients(str.encode(f"[{sender}]: {msg}\n"))
+        except Exception as e: 
+            logger.LogToFile(e)
+            sys.exit()
+        
     del clients[addr]
     conn.close()
+  
 
 def start():
     server.listen() #listen for new connections
