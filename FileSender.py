@@ -1,11 +1,12 @@
 from Sender import Sender
 import socket
 from os import path
-from Logger import Logger
+from Loggers.ConsoleLogger import ConsoleLogger
 
 class FileSender(Sender):
     def __init__(self,client):
         super().__init__(client)
+        self.currentFile = path.basename(__file__)
 
     
     def sendFileToServer(self,filePath):
@@ -26,4 +27,5 @@ class FileSender(Sender):
             pass
 
 
-"cd../../code/projects/messaging app"
+# "cd../../code/projects/messaging app"
+

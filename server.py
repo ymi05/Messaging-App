@@ -1,7 +1,11 @@
 import socket 
 import threading
 import sys
+from os import path
+from Loggers.ConsoleLogger import ConsoleLogger
+from Loggers.FileLogger import FileLogger
 
+from inspect import currentframe, getframeinfo
 HEADER = 64 
 
 PORT = 5050
@@ -12,13 +16,16 @@ FORMAT = "utf-8"
 DISCONNECT_MESSAGE = "!DISCONNECT" 
 CHANGE_NAME_MESSAGE = "!NAME=" 
 FILE_NAME_MESSAGE = "!FILE=" 
-
 server = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 server.bind(ADDR) 
 clients = {}
  
+logger = FileLogger(path.basename(__file__))
+
 def handle_client(conn, addr):
-    logger = Logger()
+    
+ 
+    
    
     print(f"[NEW CONNECTION] {addr} connected.")
     sender = addr
@@ -46,7 +53,7 @@ def handle_client(conn, addr):
                     tempName = msg.split(FILE_NAME_MESSAGE)[1]
                     print(f"[{sender}] has sent a File")
 
-                    sendToAllClients(str.encode(f"[{sender}] has sent a File"))
+                    sendToAllClients( str.encode(f"[{sender}] has sent a File"))
                     filename = ''
                     while True:
                         data = conn.recv(1024).decode('utf-8')
@@ -72,7 +79,8 @@ def handle_client(conn, addr):
 
                 sendToAllClients(str.encode(f"[{sender}]: {msg}\n"))
         except Exception as e: 
-            logger.LogToFile(e)
+            
+            logger.LogToFile(e,getframeinfo(currentframe()).lineno)
             sys.exit()
         
     del clients[addr]
@@ -81,6 +89,7 @@ def handle_client(conn, addr):
 
 def start():
     server.listen() #listen for new connections
+    logger.LogToFile("Server is listening",getframeinfo(currentframe()).lineno)
     print(f"[LISTENING] Server is listening on {SERVER}")
     while True: 
         conn, addr = server.accept() # we will store the address of the new connection and store a sokcet object that will allow us to send info back to that connection
@@ -92,6 +101,7 @@ def start():
 def sendToAllClients(message):
     for client in clients:
         clients[client].send(message)
+
 
 print("[STARTING] Server is starting... ")
 start()
