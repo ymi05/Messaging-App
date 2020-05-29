@@ -7,3 +7,5 @@ You can use more than one terminal to run the app.py script.
 
 To disconnect, type !DISCONNECT and click on send.
 To change your name, type !NAME= (*insert whatever name you want here*) and click on send
+
+To upload a file, type !U_FILE= (*insert whatever file name you want here*) and click on send
