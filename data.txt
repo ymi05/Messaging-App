@@ -11,5 +11,5 @@ class MessageSender(Sender):
         msg_length += b' ' * (self.HEADER - len(msg_length)) 
         self.client.send(msg_length)
         self.client.send(messageToBeSent)
- 
+        print("sent")
 

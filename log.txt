@@ -1,1 +1,169 @@
-Message: Server is listening	--[server.py line : 91]--	 01:28 AM-Wednesday
+Message: Server is listening	--[server.py line : 125]--	 01:49 PM-Friday
+Message: Getting File Size	--[server.py line : 93]--	 01:49 PM-Friday
+Message: [WinError 10054] An existing connection was forcibly closed by the remote host	--[server.py line : 72]--	 01:50 PM-Friday
+Message: Server is listening	--[server.py line : 126]--	 01:50 PM-Friday
+Message: Getting File Size	--[server.py line : 93]--	 01:51 PM-Friday
+Message: [WinError 10054] An existing connection was forcibly closed by the remote host	--[server.py line : 72]--	 01:51 PM-Friday
+Message: Getting File Size	--[server.py line : 93]--	 01:51 PM-Friday
+Message: [WinError 10054] An existing connection was forcibly closed by the remote host	--[server.py line : 72]--	 01:52 PM-Friday
+Message: Getting File Size	--[server.py line : 93]--	 01:52 PM-Friday
+Message: [WinError 10054] An existing connection was forcibly closed by the remote host	--[server.py line : 72]--	 01:52 PM-Friday
+Message: Server is listening	--[server.py line : 126]--	 01:53 PM-Friday
+Message: [WinError 10054] An existing connection was forcibly closed by the remote host	--[server.py line : 72]--	 01:53 PM-Friday
+Message: Server is listening	--[server.py line : 127]--	 01:53 PM-Friday
+Message: Failed to send file details.	--[FileSender.py line : 51]--	 01:54 PM-Friday
+Message: [WinError 10054] An existing connection was forcibly closed by the remote host	--[server.py line : 72]--	 01:54 PM-Friday
+Message: Server is listening	--[server.py line : 127]--	 01:54 PM-Friday
+Message: Failed to send file details.	--[FileSender.py line : 51]--	 01:55 PM-Friday
+Message: [WinError 10054] An existing connection was forcibly closed by the remote host	--[server.py line : 72]--	 01:55 PM-Friday
+Message: Server is listening	--[server.py line : 127]--	 01:55 PM-Friday
+Message: [WinError 10054] An existing connection was forcibly closed by the remote host	--[server.py line : 72]--	 01:55 PM-Friday
+Message: Server is listening	--[server.py line : 127]--	 02:03 PM-Friday
+Message: [WinError 10054] An existing connection was forcibly closed by the remote host	--[server.py line : 72]--	 02:03 PM-Friday
+Message: Server is listening	--[server.py line : 127]--	 02:03 PM-Friday
+Message: [WinError 10054] An existing connection was forcibly closed by the remote host	--[server.py line : 72]--	 02:04 PM-Friday
+Message: Server is listening	--[server.py line : 127]--	 02:04 PM-Friday
+Message: [WinError 10054] An existing connection was forcibly closed by the remote host	--[server.py line : 72]--	 02:04 PM-Friday
+Message: Server is listening	--[server.py line : 125]--	 02:06 PM-Friday
+Message: Ready	--[server.py line : 83]--	 02:06 PM-Friday
+Message: [WinError 10054] An existing connection was forcibly closed by the remote host	--[server.py line : 72]--	 02:06 PM-Friday
+Message: Server is listening	--[server.py line : 122]--	 02:07 PM-Friday
+Message: Ready	--[server.py line : 80]--	 02:07 PM-Friday
+Message: Failed to send file details.	--[FileSender.py line : 49]--	 02:07 PM-Friday
+Message: Creating a local copy...	--[server.py line : 96]--	 02:07 PM-Friday
+Message: [WinError 10054] An existing connection was forcibly closed by the remote host	--[server.py line : 70]--	 02:07 PM-Friday
+Message: Server is listening	--[server.py line : 122]--	 02:08 PM-Friday
+Message: Ready	--[server.py line : 80]--	 02:08 PM-Friday
+Message: Failed to send file details.	--[FileSender.py line : 49]--	 02:08 PM-Friday
+Message: Creating a local copy...	--[server.py line : 96]--	 02:08 PM-Friday
+Message: [WinError 10054] An existing connection was forcibly closed by the remote host	--[server.py line : 70]--	 02:08 PM-Friday
+Message: Server is listening	--[server.py line : 123]--	 02:09 PM-Friday
+Message: Ready	--[server.py line : 80]--	 02:09 PM-Friday
+Message: Failed to send file details.	--[FileSender.py line : 49]--	 02:09 PM-Friday
+Message: Creating a local copy...	--[server.py line : 96]--	 02:09 PM-Friday
+Message: Ready	--[server.py line : 80]--	 02:09 PM-Friday
+Message: [WinError 10054] An existing connection was forcibly closed by the remote host	--[server.py line : 70]--	 02:09 PM-Friday
+Message: Server is listening	--[server.py line : 124]--	 02:10 PM-Friday
+Message: Ready	--[server.py line : 80]--	 02:10 PM-Friday
+Message: Failed to send file details.	--[FileSender.py line : 49]--	 02:10 PM-Friday
+Message: Creating a local copy...	--[server.py line : 96]--	 02:10 PM-Friday
+Message: Server is listening	--[server.py line : 125]--	 02:10 PM-Friday
+Message: Ready	--[server.py line : 80]--	 02:10 PM-Friday
+Message: Failed to send file details.	--[FileSender.py line : 49]--	 02:11 PM-Friday
+Message: Creating a local copy...	--[server.py line : 96]--	 02:11 PM-Friday
+Message: [WinError 10054] An existing connection was forcibly closed by the remote host	--[server.py line : 70]--	 02:11 PM-Friday
+Message: Server is listening	--[server.py line : 124]--	 02:11 PM-Friday
+Message: Ready	--[server.py line : 80]--	 02:11 PM-Friday
+Message: Failed to send file details.	--[FileSender.py line : 49]--	 02:11 PM-Friday
+Message: Creating a local copy...	--[server.py line : 96]--	 02:11 PM-Friday
+Message: Ready	--[server.py line : 80]--	 02:11 PM-Friday
+Message: [WinError 10054] An existing connection was forcibly closed by the remote host	--[server.py line : 70]--	 02:12 PM-Friday
+Message: Server is listening	--[server.py line : 124]--	 02:12 PM-Friday
+Message: Ready	--[server.py line : 80]--	 02:12 PM-Friday
+Message: Failed to send file details.	--[FileSender.py line : 49]--	 02:12 PM-Friday
+Message: Creating a local copy...	--[server.py line : 96]--	 02:12 PM-Friday
+Message: Ready	--[server.py line : 80]--	 02:12 PM-Friday
+Message: [WinError 10054] An existing connection was forcibly closed by the remote host	--[server.py line : 70]--	 02:12 PM-Friday
+Message: Server is listening	--[server.py line : 124]--	 02:30 PM-Friday
+Message: Server is listening	--[server.py line : 123]--	 02:34 PM-Friday
+Message: Ready	--[server.py line : 81]--	 02:35 PM-Friday
+Message: [WinError 10054] An existing connection was forcibly closed by the remote host	--[server.py line : 71]--	 02:35 PM-Friday
+Message: Server is listening	--[server.py line : 124]--	 02:35 PM-Friday
+Message: Ready	--[server.py line : 81]--	 02:35 PM-Friday
+Message: Failed to send file details.	--[FileSender.py line : 49]--	 02:35 PM-Friday
+Message: Unable to upload file.	--[FileSender.py line : 67]--	 02:35 PM-Friday
+Message: Server is listening	--[server.py line : 124]--	 02:36 PM-Friday
+Message: Ready	--[server.py line : 81]--	 02:36 PM-Friday
+Message: Failed to send file details.	--[FileSender.py line : 49]--	 02:36 PM-Friday
+Message: [WinError 10054] An existing connection was forcibly closed by the remote host	--[server.py line : 71]--	 02:37 PM-Friday
+Message: Server is listening	--[server.py line : 124]--	 02:37 PM-Friday
+Message: Ready	--[server.py line : 81]--	 02:37 PM-Friday
+Message: Creating a local copy...	--[server.py line : 98]--	 02:37 PM-Friday
+Message: Failed to send file details.	--[FileSender.py line : 49]--	 02:37 PM-Friday
+Message: name 'fileSize' is not defined	--[server.py line : 71]--	 02:37 PM-Friday
+Message: Server is listening	--[server.py line : 124]--	 02:37 PM-Friday
+Message: Ready	--[server.py line : 81]--	 02:38 PM-Friday
+Message: Failed to send file details.	--[FileSender.py line : 49]--	 02:38 PM-Friday
+Message: Creating a local copy...	--[server.py line : 98]--	 02:38 PM-Friday
+Message: [WinError 10054] An existing connection was forcibly closed by the remote host	--[server.py line : 71]--	 02:38 PM-Friday
+Message: Server is listening	--[server.py line : 125]--	 02:38 PM-Friday
+Message: Ready	--[server.py line : 81]--	 02:38 PM-Friday
+Message: Failed to send file details.	--[FileSender.py line : 49]--	 02:38 PM-Friday
+Message: Creating a local copy...	--[server.py line : 98]--	 02:38 PM-Friday
+Message: [WinError 10054] An existing connection was forcibly closed by the remote host	--[server.py line : 71]--	 02:39 PM-Friday
+Message: Server is listening	--[server.py line : 125]--	 02:39 PM-Friday
+Message: Ready	--[server.py line : 81]--	 02:40 PM-Friday
+Message: Failed to send file details.	--[FileSender.py line : 49]--	 02:40 PM-Friday
+Message: [WinError 10054] An existing connection was forcibly closed by the remote host	--[server.py line : 71]--	 02:40 PM-Friday
+Message: Server is listening	--[server.py line : 125]--	 02:40 PM-Friday
+Message: Ready	--[server.py line : 81]--	 02:41 PM-Friday
+Message: Failed to send file details.	--[FileSender.py line : 49]--	 02:41 PM-Friday
+Message: Creating a local copy...	--[server.py line : 98]--	 02:41 PM-Friday
+Message: [WinError 10054] An existing connection was forcibly closed by the remote host	--[server.py line : 71]--	 02:41 PM-Friday
+Message: Ready	--[server.py line : 81]--	 02:41 PM-Friday
+Message: Failed to send file details.	--[FileSender.py line : 49]--	 02:41 PM-Friday
+Message: Creating a local copy...	--[server.py line : 98]--	 02:41 PM-Friday
+Message: [WinError 10054] An existing connection was forcibly closed by the remote host	--[server.py line : 71]--	 02:42 PM-Friday
+Message: [WinError 10054] An existing connection was forcibly closed by the remote host	--[server.py line : 71]--	 02:42 PM-Friday
+Message: Server is listening	--[server.py line : 125]--	 02:42 PM-Friday
+Message: Ready	--[server.py line : 81]--	 02:42 PM-Friday
+Message: Failed to send file details.	--[FileSender.py line : 49]--	 02:42 PM-Friday
+Message: Unable to upload file.	--[FileSender.py line : 70]--	 02:42 PM-Friday
+Message: Failed to send file details.	--[FileSender.py line : 49]--	 02:42 PM-Friday
+Message: Creating a local copy...	--[server.py line : 98]--	 02:42 PM-Friday
+Message: Unable to upload file.	--[FileSender.py line : 70]--	 02:42 PM-Friday
+Message: Failed to send file details.	--[FileSender.py line : 49]--	 02:43 PM-Friday
+Message: Unable to upload file.	--[FileSender.py line : 70]--	 02:43 PM-Friday
+Message: [WinError 10054] An existing connection was forcibly closed by the remote host	--[server.py line : 71]--	 02:43 PM-Friday
+Message: Server is listening	--[server.py line : 125]--	 02:44 PM-Friday
+Message: Ready	--[server.py line : 81]--	 02:44 PM-Friday
+Message: Failed to send file details.	--[FileSender.py line : 49]--	 02:44 PM-Friday
+Message: Unable to upload file.	--[FileSender.py line : 70]--	 02:44 PM-Friday
+Message: File not found.	--[FileSender.py line : 25]--	 02:44 PM-Friday
+Message: [WinError 10054] An existing connection was forcibly closed by the remote host	--[server.py line : 71]--	 02:44 PM-Friday
+Message: Server is listening	--[server.py line : 126]--	 02:45 PM-Friday
+Message: Server is listening	--[server.py line : 126]--	 02:45 PM-Friday
+Message: Ready	--[server.py line : 81]--	 02:45 PM-Friday
+Message: Failed to send file details.	--[FileSender.py line : 49]--	 02:45 PM-Friday
+Message: Unable to upload file.	--[FileSender.py line : 70]--	 02:45 PM-Friday
+Message: [WinError 10054] An existing connection was forcibly closed by the remote host	--[server.py line : 71]--	 02:47 PM-Friday
+Message: Ready	--[server.py line : 81]--	 02:47 PM-Friday
+Message: Failed to send file details.	--[FileSender.py line : 49]--	 02:47 PM-Friday
+Message: Creating a local copy...	--[server.py line : 98]--	 02:47 PM-Friday
+Message: [WinError 10054] An existing connection was forcibly closed by the remote host	--[server.py line : 71]--	 02:48 PM-Friday
+Message: Server is listening	--[server.py line : 126]--	 02:50 PM-Friday
+Message: Ready	--[server.py line : 81]--	 02:50 PM-Friday
+Message: Unable to upload file.	--[FileSender.py line : 53]--	 02:50 PM-Friday
+Message: [WinError 10054] An existing connection was forcibly closed by the remote host	--[server.py line : 71]--	 02:50 PM-Friday
+Message: Server is listening	--[server.py line : 115]--	 02:54 PM-Friday
+Message: Unable to upload file.	--[FileSender.py line : 53]--	 02:54 PM-Friday
+Message: [WinError 10054] An existing connection was forcibly closed by the remote host	--[server.py line : 72]--	 02:54 PM-Friday
+Message: Unable to upload file.	--[FileSender.py line : 53]--	 02:54 PM-Friday
+Message: [WinError 10054] An existing connection was forcibly closed by the remote host	--[server.py line : 72]--	 02:55 PM-Friday
+Message: Unable to upload file.	--[FileSender.py line : 53]--	 02:55 PM-Friday
+Message: [WinError 10054] An existing connection was forcibly closed by the remote host	--[server.py line : 72]--	 02:55 PM-Friday
+Message: Server is listening	--[server.py line : 115]--	 02:56 PM-Friday
+Message: Unable to upload file.	--[FileSender.py line : 53]--	 02:58 PM-Friday
+Message: [WinError 10054] An existing connection was forcibly closed by the remote host	--[server.py line : 72]--	 02:58 PM-Friday
+Message: Server is listening	--[server.py line : 116]--	 02:59 PM-Friday
+Message: a bytes-like object is required, not 'str'	--[server.py line : 72]--	 02:59 PM-Friday
+Message: Server is listening	--[server.py line : 116]--	 03:02 PM-Friday
+Message: Server is listening	--[server.py line : 103]--	 03:03 PM-Friday
+Message: [WinError 10054] An existing connection was forcibly closed by the remote host	--[server.py line : 72]--	 03:04 PM-Friday
+Message: Server is listening	--[server.py line : 103]--	 03:06 PM-Friday
+Message: [WinError 10054] An existing connection was forcibly closed by the remote host	--[server.py line : 72]--	 03:07 PM-Friday
+Message: Server is listening	--[server.py line : 101]--	 03:08 PM-Friday
+Message: [Errno 2] No such file or directory: 'R_../test.txt'	--[server.py line : 72]--	 03:09 PM-Friday
+Message: Server is listening	--[server.py line : 102]--	 03:09 PM-Friday
+Message: [Errno 2] No such file or directory: 'R_../test.txt'	--[server.py line : 72]--	 03:09 PM-Friday
+Message: Server is listening	--[server.py line : 102]--	 03:12 PM-Friday
+Message: [Errno 2] No such file or directory: 'R_../test.txt'	--[server.py line : 72]--	 03:12 PM-Friday
+Message: [WinError 10054] An existing connection was forcibly closed by the remote host	--[server.py line : 72]--	 03:13 PM-Friday
+Message: Server is listening	--[server.py line : 102]--	 03:21 PM-Friday
+Message: [WinError 10054] An existing connection was forcibly closed by the remote host	--[server.py line : 72]--	 03:22 PM-Friday
+Message: Server is listening	--[server.py line : 102]--	 03:23 PM-Friday
+Message: [WinError 10054] An existing connection was forcibly closed by the remote host	--[server.py line : 72]--	 03:24 PM-Friday
+Message: [WinError 10054] An existing connection was forcibly closed by the remote host	--[server.py line : 72]--	 03:24 PM-Friday
+Message: [WinError 10054] An existing connection was forcibly closed by the remote host	--[server.py line : 72]--	 03:24 PM-Friday
+Message: Server is listening	--[server.py line : 102]--	 03:25 PM-Friday
+Message: Server is listening	--[server.py line : 101]--	 03:27 PM-Friday

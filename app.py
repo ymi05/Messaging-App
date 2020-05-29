@@ -49,7 +49,7 @@ class MessageApp():
     def send(self,msg):
         self.messageEntry.delete(0, END)
         self.messageEntry.insert(0, "")
-        if("!FILE=") in msg:
+        if "!U_FILE=" in msg:
             self.fileSender.sendFileToServer(msg)
         else:
             self.messageSender.sendMessageToServer(msg)
