@@ -1,6 +1,6 @@
-from Commands import Commands
+from Sender import Sender
 
-class MessageSender(Commands):
+class MessageSender(Sender):
     def __init__(self,client):
         super().__init__(client)
     
@@ -11,5 +11,5 @@ class MessageSender(Commands):
         msg_length += b' ' * (self.HEADER - len(msg_length)) 
         self.client.send(msg_length)
         self.client.send(messageToBeSent)
- 
+        print("sent")
 
