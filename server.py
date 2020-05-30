@@ -6,6 +6,8 @@ import time
 import sys
 import threading
 import socket
+import glob
+
 
 from inspect import currentframe, getframeinfo
 HEADER = 1024 
@@ -44,6 +46,10 @@ def handle_client(conn, addr):
                 elif(msg_length == "!D_FILE="):
                  
                     sendFile(conn)
+                    continue
+                
+                elif(msg_length == "!LISTF"):
+                    listFiles(conn)
                     continue
 
                 msg_length = int(msg_length)
@@ -84,10 +90,10 @@ def uploadFile(conn,sender):
     msg_length = conn.recv(HEADER).decode(FORMAT)
     msg_length = int(msg_length)
     fileName = conn.recv(msg_length).decode(FORMAT)
+
     sendToAllClients(str.encode(f"[{sender}]: Uploaded U_{fileName} \n"))
  
-
-    with open("UploadedFolders/U_"+fileName, "w+") as fileRecived:
+    with open("UploadedFiles/U_"+fileName, "w+") as fileRecived:
         msg_length = conn.recv(HEADER).decode(FORMAT)
         msg_length = int(msg_length)
         msg = conn.recv(msg_length).decode(FORMAT)
@@ -102,27 +108,30 @@ def sendFile(conn):
     fileName = conn.recv(msg_length).decode(FORMAT)
 
     try:
-        # Check the file exists
-        content = open(f"UploadedFolders/{fileName}", "r")
+        # Check if the file exists
+        content = open(f"UploadedFiles/{fileName}", "r")
         logger.LogToFile("FILE FOUND", getframeinfo(currentframe()).lineno)
         logger.LogToFile(f"Sendings the contents of {fileName}", getframeinfo(currentframe()).lineno)
 
 
-        data = conn.send(content.read().encode(FORMAT)).encode(self.FORMAT) 
-        msg_length = len(data)
-        msg_length = str(msg_length).encode(self.FORMAT)
-        msg_length += b' ' * (self.HEADER - len(msg_length)) 
-        self.client.send(msg_length)
-        self.client.send(data)
+        conn.send(content.read().encode(FORMAT))
 
-
-   
-        
     except:
         logger.LogToFile(f"[{fileName}] File not found.",getframeinfo(currentframe()).lineno)
-        conn.send(b'404')
-        return
+        conn.send("404: The file you requested does not exist".encode(FORMAT))
+        
+    finally:
+        content.close()
 
+
+def listFiles(conn):
+    path = 'UploadedFiles'
+
+    files = [f for f in glob.glob(path + "**/*.*", recursive=True)]
+
+    for file in files:
+        conn.send(("- "+file.split("\\")[1]+"\n").encode(FORMAT))
+ 
 
 
 
