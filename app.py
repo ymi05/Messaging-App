@@ -3,6 +3,7 @@ from tkinter import scrolledtext
 from client import Client
 from MessageSender import MessageSender
 from FileSender import FileSender
+from FileRetriver import FileRetriver
 import threading
 import time
 
@@ -33,14 +34,20 @@ class MessageApp():
         self.clientObj = self.clientObj.getClient()
         self.messageSender = MessageSender(self.clientObj)
         self.fileSender = FileSender(self.clientObj)
+        self.fileRetriver = FileRetriver(self.clientObj)
+
+        self.currentCommand = ""
+
+
         self.thread = threading.Thread(target=self.waitForResponse)
         self.thread.start()
    
 
 
     def printToTextBox(self,message):
-        print(message)
+        
         self.txtField.insert(INSERT, message)
+  
 
      
 
@@ -50,7 +57,12 @@ class MessageApp():
         self.messageEntry.delete(0, END)
         self.messageEntry.insert(0, "")
         if "!U_FILE=" in msg:
+            self.currentCommand = "!U_FILE="
             self.fileSender.sendFileToServer(msg)
+        elif "!D_FILE=" in msg:
+            self.currentCommand = "!D_FILE="
+            self.fileRetriver.requestFile(msg)
+
         else:
             self.messageSender.sendMessageToServer(msg)
 
@@ -62,10 +74,14 @@ class MessageApp():
     def waitForResponse(self):
         while True:
             serverMessage = self.clientObj.recv(1024).decode(self.FORMAT)
-        
+
             if len(serverMessage) <= 0:
                 break
             self.printToTextBox(serverMessage)
+    
+   
+
+        
 def main():
 
     window = Tk()

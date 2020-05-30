@@ -1,6 +1,6 @@
-from Sender import Sender
+from Commands import Commands
 
-class MessageSender(Sender):
+class MessageSender(Commands):
     def __init__(self,client):
         super().__init__(client)
     

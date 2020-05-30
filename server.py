@@ -41,6 +41,10 @@ def handle_client(conn, addr):
                     uploadFile(conn,sender)
 
                     continue
+                elif(msg_length == "!D_FILE="):
+                 
+                    sendFile(conn)
+                    continue
 
                 msg_length = int(msg_length)
                 msg = conn.recv(msg_length).decode(FORMAT)
@@ -80,7 +84,7 @@ def uploadFile(conn,sender):
     msg_length = conn.recv(HEADER).decode(FORMAT)
     msg_length = int(msg_length)
     fileName = conn.recv(msg_length).decode(FORMAT)
-    sendToAllClients(str.encode(f"[{sender}]: Uploaded {fileName} \n"))
+    sendToAllClients(str.encode(f"[{sender}]: Uploaded U_{fileName} \n"))
  
 
     with open("UploadedFolders/U_"+fileName, "w+") as fileRecived:
@@ -90,6 +94,34 @@ def uploadFile(conn,sender):
         fileRecived.write(msg)
       
     
+
+def sendFile(conn):
+
+    msg_length = conn.recv(HEADER).decode(FORMAT)
+    msg_length = int(msg_length)
+    fileName = conn.recv(msg_length).decode(FORMAT)
+
+    try:
+        # Check the file exists
+        content = open(f"UploadedFolders/{fileName}", "r")
+        logger.LogToFile("FILE FOUND", getframeinfo(currentframe()).lineno)
+        logger.LogToFile(f"Sendings the contents of {fileName}", getframeinfo(currentframe()).lineno)
+
+
+        data = conn.send(content.read().encode(FORMAT)).encode(self.FORMAT) 
+        msg_length = len(data)
+        msg_length = str(msg_length).encode(self.FORMAT)
+        msg_length += b' ' * (self.HEADER - len(msg_length)) 
+        self.client.send(msg_length)
+        self.client.send(data)
+
+
+   
+        
+    except:
+        logger.LogToFile(f"[{fileName}] File not found.",getframeinfo(currentframe()).lineno)
+        conn.send(b'404')
+        return
 
 
 

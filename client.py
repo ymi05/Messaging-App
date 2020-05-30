@@ -12,8 +12,15 @@ class Client():
         self.client = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
         self.client.connect(self.ADDR)
 
+        self.name = self.ADDR
+
 
 
     def getClient(self):
         return self.client
 
+    def changeName(self,newName):
+        self.name = newName
+
+    def getClientName(self):
+        return self.name

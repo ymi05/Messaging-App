@@ -1,4 +1,4 @@
-from Sender import Sender
+from Commands import Commands
 import socket
 from os import path
 from Loggers.FileLogger import FileLogger
@@ -6,7 +6,7 @@ from Loggers.ConsoleLogger import ConsoleLogger
 from inspect import currentframe, getframeinfo
 from MessageSender import MessageSender
 
-class FileSender(Sender):
+class FileSender(Commands):
     def __init__(self,client):
         super().__init__(client)
 
